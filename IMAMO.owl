@@ -1,0 +1,974 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#"
+     xml:base="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:IMAMO="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO">
+        <rdfs:label>IMAMO: Industrial MAintenance Management Ontology</rdfs:label>
+        <rdfs:comment xml:lang="en">IMAMO V2.0 conceptualized &amp; developped by Hedi Karray. Contact: mkarray@enit.fr, Université fédérale de Toulouse-Midi-Pyrénées. ENIT.
+Reference publication: &quot;A formal ontology for industrial maintenance&quot;, MH Karray, B Chebel-Morello, N Zerhouni - Applied Ontology, 2012</rdfs:comment>
+        <owl:priorVersion xml:lang="en">IMAMO V0.1
+Powerloom and UML calss diagram version
+Was developped By Hedi Karray et al in the scope of the european project SMAC at femto-st institute, University of Franche-Comté.</owl:priorVersion>
+        <owl:versionInfo>V2.0- OWL version</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#belongsTo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#belongsToDom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#belongsToDom">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#belongsTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentGroup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Domain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#belongsToEqG -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#belongsToEqG">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#belongsTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PhysicalEquipment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#hasComponent">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#hasID"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PhysicalEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#construction_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#construction_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#constructor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#constructor">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#hasID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#hasID"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#purchase_cost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#purchase_cost">
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#purchase_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#purchase_date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Activity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Activity_InPut_OutPut -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Activity_InPut_OutPut"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Alarm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Alarm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TriggeringEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Annotation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Annotation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Area"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#CMMS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#CMMS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Capacity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Capacity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Competency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Competency">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Component">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ExploitationMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ComponentModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ComponentModel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Component_InPut_OutPut -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Component_InPut_OutPut">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Equipment_InPut_OutPut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Condition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Constraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Constraint"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Contract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Contract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#DataAcquisationSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#DataAcquisationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Data_Information -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Data_Information">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#DegradatedState -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#DegradatedState">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#OperatingMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Degradation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Degradation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Dysfunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#DiagnosticTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#DiagnosticTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Document">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Domain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Domain"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Dysfunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Dysfunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Trouble"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ERP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ERP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EnvironmentalRequirment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EnvironmentalRequirment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentDraw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentDraw">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TechnicalDocumentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentGroup"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentLocation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentModel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentUnderRepair -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EquipmentUnderRepair">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ExploitationMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Equipment_InPut_OutPut -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Equipment_InPut_OutPut"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EventObservedByUser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#EventObservedByUser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TriggeringEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Expert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Expert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ExploitationMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ExploitationMode"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ExternalService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ExternalService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Failure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Failure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Dysfunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FailureState -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FailureState">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#OperatingMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FinancialDocument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FinancialDocument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FinancialIndicator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FinancialIndicator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Function"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FunctionalFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FunctionalFlow"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FunctionalPeriod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FunctionalPeriod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Period"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FunctionalRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FunctionalRequirement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#GeoLocationSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#GeoLocationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Goal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Goal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#GoalRequirment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#GoalRequirment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#HumanResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#HumanResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ImporovementRequest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ImporovementRequest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TriggeringEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Indicator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Indicator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Intervention -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Intervention">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#InterventionReport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#InterventionReport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#InterventionType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#InterventionType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PorcessPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#LifeRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#LifeRecord"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Lubricant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Lubricant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceScheduler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceScheduler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceStrategy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceStrategy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PhysicalEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PorcessPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Manager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Manager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Matter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Matter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#FunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Measure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MintenanceCenter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MintenanceCenter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Sub-Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#NormalState -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#NormalState">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#OperatingMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Notification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Notification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TriggeringEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#OperatingMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#OperatingMode"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Operator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Operator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Owner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Owner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Period -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Period"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PhysicalEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PhysicalEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Resource"/>
+        <rdfs:isDefinedBy>A tangible, instantiated, serialized object.....</rdfs:isDefinedBy>
+        <rdfs:label>Asset</rdfs:label>
+        <rdfs:label>Device</rdfs:label>
+        <rdfs:label>Item</rdfs:label>
+        <rdfs:label>Machine</rdfs:label>
+        <rdfs:label>PhysicalEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PorcessPattern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PorcessPattern">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Process -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Process"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ProductionArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ProductionArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Sub-Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ProductionEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ProductionEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ExploitationMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ProductionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ProductionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Prognostic-RUL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Prognostic-RUL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Notification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PrognosticTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PrognosticTool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ProgrammedStop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ProgrammedStop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#OperatingMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#RepairAction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#RepairAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#MaintenanceTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Requirement_InPut_OutPut -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Requirement_InPut_OutPut">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Equipment_InPut_OutPut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#RequirmentNotCompiled -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#RequirmentNotCompiled">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Trouble"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Resource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Resource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ResourceScheduler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ResourceScheduler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Role"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PhysicalEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Site -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Site">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Skill"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SparePart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SparePart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#ExploitationMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Step -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Step"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Store -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Store">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Sub-Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Sub-Area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Sub-Area">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SubFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SubFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Task"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TechnicalDocumentation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TechnicalDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TechnicalIndicator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TechnicalIndicator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Transition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Transition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TransportationEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TransportationEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PhysicalEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TriggeringEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#TriggeringEvent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Trouble -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Trouble"/>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Warning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Warning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Notification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#WorkOrder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#WorkOrder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#WorkRequest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#WorkRequest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#WorkRequestProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#WorkRequestProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#e-Doc-System -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#e-Doc-System">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SoftwareResource"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Equipement1_Test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Equipement1_Test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PhysicalEquipment"/>
+        <hasID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQ1T67</hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SISTRE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#SISTRE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#PhysicalEquipment"/>
+        <EquipmentID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25AS2M</EquipmentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#composant1_TEst -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#composant1_TEst">
+        <rdf:type rdf:resource="http://www.semanticweb.org/karray/ontologies/2016/0/IMAMO#Component"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+
